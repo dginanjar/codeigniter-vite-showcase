@@ -1,0 +1,37 @@
+<header class="header header-sticky mb-4">
+    <div class="container-fluid">
+        <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+            <svg class="icon icon-lg">
+              <use xlink:href="/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+            </svg>
+        </button>
+
+        <a class="header-brand d-md-none" href="#">
+            <svg width="118" height="46" alt="CoreUI Logo">
+                <use xlink:href="/coreui/assets/brand/coreui.svg#full"></use>
+            </svg>
+        </a>
+
+        <ul class="header-nav d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+            <li class="nav-items">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-coreui-toggle="dropdown" aria-expanded="false">
+                    Users
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header-divider"></div>
+
+    <div class="container-fluid">
+        {% include 'admin/_layout/breadcrumb.html' %}
+    </div>
+</header>
